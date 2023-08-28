@@ -132,8 +132,8 @@ public class MyBatisNativeConfiguration {
           HashSet.class
       ).forEach(x -> hints.reflection().registerType(x, MemberCategory.values()));
       Stream.of(
-          "org/apache/ibatis/builder/xml/.*.dtd",
-          "org/apache/ibatis/builder/xml/.*.xsd"
+          "org/apache/ibatis/builder/xml/*.dtd",
+          "org/apache/ibatis/builder/xml/*.xsd"
       ).forEach(hints.resources()::registerPattern);
 
       hints.serialization().registerType(SerializedLambda.class);
